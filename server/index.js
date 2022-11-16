@@ -83,7 +83,7 @@ app.get('/api/user/auth', auth, (req, res) => {
     name: req.user.name,
     lastname: req.user.lastname,
     role: req.user.role,
-    image: req.usre.image
+    image: req.user.image
   })
 })
 

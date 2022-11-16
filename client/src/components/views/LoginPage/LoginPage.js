@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import { useNavigate } from "react-router-dom";
+import Auth from '../../../hoc/auth';
 function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ function LoginPage() {
   const [Password, setPassword] = useState("");
 
   const onEmailHandler = (event) => {
-    setEmail(event.currentTarget.value);
+    setEmail(event.target.value);
   }
 
   const onPasswordHandler = (event) => {
@@ -52,9 +53,10 @@ function LoginPage() {
         <button>
           Login
         </button>
+
       </form>
     </div>
   )
 }
 
-export default LoginPage
+export default Auth(LoginPage, false);
