@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function (SpecificComponent, option, adminRoute = null) {
   //option : null = anyone, true = login user only, false = logout user only
-  function AuthenticationCheck(props) {
+  function AuthenticationCheck() {
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
