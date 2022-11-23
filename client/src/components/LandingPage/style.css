@@ -159,6 +159,7 @@ p {
   background-color: transparent;
   transition: all var(--anmimation-duration) ease-in-out;
   overflow: hidden;
+  white-space:nowrap;
 }
 .sub__menu__item{
   padding: 4px 3px;
